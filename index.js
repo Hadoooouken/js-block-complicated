@@ -1,8 +1,41 @@
-const num = 266219;
+let leng = prompt('');
 
-const numToString = num.toString().split("");
+const daysEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const res = numToString.reduce((acc, num) => acc * num, 1) ** 3;
+const daysRu = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 
-console.log(res.toString().slice(0, 2));
+if (leng === "ru") {
+    console.log(daysRu)
+}
 
+else if (leng === 'en') {
+    console.log(daysEn)
+}
+
+else console.log("выберите ru или en");
+
+switch (leng) {
+    case 'ru':
+        console.log(daysRu);
+        break;
+
+    case 'en':
+        console.log(daysEn);
+        break;
+
+    default:
+        console.log('выберите ru или en');
+        break;
+}
+
+const AllLanguage = [
+    ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+];
+
+const langKey = {
+    en: 0,
+    ru: 1
+}
+
+console.log(AllLanguage[langKey[leng]] || console.log('выберите ru или en'));
