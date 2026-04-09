@@ -1,41 +1,51 @@
-let leng = prompt('');
+// let leng = prompt('');
 
-const daysEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+// const daysEn = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const daysRu = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+// const daysRu = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 
-if (leng === "ru") {
-    console.log(daysRu)
-}
+// if (leng === "ru") {
+//     console.log(daysRu)
+// }
 
-else if (leng === 'en') {
-    console.log(daysEn)
-}
+// else if (leng === 'en') {
+//     console.log(daysEn)
+// }
 
-else console.log("выберите ru или en");
+// else console.log("выберите ru или en");
 
-switch (leng) {
-    case 'ru':
-        console.log(daysRu);
-        break;
+// switch (leng) {
+//     case 'ru':
+//         console.log(daysRu);
+//         break;
 
-    case 'en':
-        console.log(daysEn);
-        break;
+//     case 'en':
+//         console.log(daysEn);
+//         break;
 
-    default:
-        console.log('выберите ru или en');
-        break;
-}
+//     default:
+//         console.log('выберите ru или en');
+//         break;
+// }
 
-const AllLanguage = [
-    ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-];
+// const AllLanguage = [
+//     ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+//     ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+// ];
 
-const langKey = {
-    en: 0,
-    ru: 1
-}
+// const langKey = {
+//     en: 0,
+//     ru: 1
+// }
 
-console.log(AllLanguage[langKey[leng]] || console.log('выберите ru или en'));
+// console.log(AllLanguage[langKey[leng]] || console.log('выберите ru или en'));
+
+let namePerson = prompt('Введите имя')
+
+
+
+const res = namePerson === 'Артем' ? 'директор'
+    : namePerson === 'Александр' ? 'преподаватель'
+        : 'студент';
+
+console.log(res);
