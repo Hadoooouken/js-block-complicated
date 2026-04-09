@@ -1,8 +1,16 @@
-const num = 266219;
+const foo = (data) => {
+    if (typeof (data) !== 'string') {
+        console.log('это не строка');
+        return
+    }
+    let trimString = data.trim()
 
-const numToString = num.toString().split("");
+    if (trimString.length > 30) {
+        return trimString.slice(0, 30) + '...';
+    }
+    else return trimString;
 
-const res = numToString.reduce((acc, num) => acc * num, 1) ** 3;
 
-console.log(res.toString().slice(0, 2));
+}
 
+console.log(foo(' гло-Академия ')); 
