@@ -8,7 +8,7 @@ const one = () => {
         if (attempt <= 0) {
             const answer = confirm('"Попытки закончились, хотите сыграть еще')
             if (answer) {
-                randomNumber = Math.floor(Math.random() * 10 + 1);
+                randomNumber = Math.floor(Math.random() * 100 + 1);
                 console.log(randomNumber);
                 attempt = 10;
                 two()
@@ -42,7 +42,7 @@ const one = () => {
             let newGame = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?')
             if (newGame) {
 
-                randomNumber = Math.floor(Math.random() * 10 + 1);
+                randomNumber = Math.floor(Math.random() * 100 + 1);
                 console.log(randomNumber);
                 attempt = 10;
                 two()
