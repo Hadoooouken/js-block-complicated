@@ -1,61 +1,27 @@
-const one = () => {
 
-    let randomNumber = Math.floor(Math.random() * 100 + 1);
-    let attempt = 10;
 
-    console.log(randomNumber);
-    const two = () => {
-        if (attempt <= 0) {
-            const answer = confirm('"Попытки закончились, хотите сыграть еще')
-            if (answer) {
-                randomNumber = Math.floor(Math.random() * 100 + 1);
-                console.log(randomNumber);
-                attempt = 10;
-                two()
-            }
-            else return
+const week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье',]
+const date = new Date().getDay()
+const today = (date + 6) % 7
 
-        }
-        let a = prompt("Угадай число от 1 до 100")
-        if (a === null) {
-            alert('Игра окончена!')
-            return
-        }
-        const b = Number(a)
 
-        if (isNaN(b)) {
-            alert('Введи число!')
-            two()
-            return
-        }
-        if (b > randomNumber) {
-            attempt--
-            alert(`Загаданное число меньше, осталось попыток ${attempt}`)
-            two()
-        }
-        else if (b < randomNumber) {
-            attempt--
-            alert(`Загаданное число больше, осталось попыток ${attempt}`)
-            two()
-        }
-        else {
-            let newGame = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?')
-            if (newGame) {
 
-                randomNumber = Math.floor(Math.random() * 100 + 1);
-                console.log(randomNumber);
-                attempt = 10;
-                two()
-            }
-        }
+
+
+week.forEach((day, index) => {
+
+    const newDiv = document.createElement('div')
+    newDiv.textContent = day
+    if (day === 'Суббота' || day === 'Воскресенье') {
+        newDiv.style.fontStyle = 'italic'
+    }
+    if (index === today) {
+        newDiv.style.fontWeight = 'bold'
     }
 
-    two()
-}
+    document.body.append(newDiv)
+})
 
-
-
-one()
 
 
 
